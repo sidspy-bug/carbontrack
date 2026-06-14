@@ -1,0 +1,249 @@
+/* ==========================
+   REPORTS CSS
+========================== */
+
+.reports-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+.header-text h1 {
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 30px;
+
+    color: #263238;
+
+}
+
+.header-text p {
+
+    color: #607D8B;
+
+    margin-top: 5px;
+
+    font-size: 16px;
+
+}
+
+.print-btn {
+
+    background: #E8F5E9;
+
+    color: #2E7D32;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+.print-btn:hover {
+
+    background: #C8E6C9;
+
+}
+
+/* Tabs */
+
+.reports-tabs {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+
+}
+
+.tab-btn {
+
+    background: #ffffff;
+
+    border: 1px solid #DDE7E1;
+
+    padding: 10px 25px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #607D8B;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.tab-btn:hover {
+
+    background: #F5FFF7;
+
+    color: #2E7D32;
+
+}
+
+.tab-btn.active {
+
+    background: #2E7D32;
+
+    color: white;
+
+    border-color: #2E7D32;
+
+}
+
+/* Summary Cards */
+
+.report-summary {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 35px;
+
+}
+
+.summary-card {
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+
+    text-align: center;
+
+}
+
+.summary-card h3 {
+
+    color: #607D8B;
+
+    font-size: 15px;
+
+    margin-bottom: 10px;
+
+}
+
+.summary-card h2 {
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 28px;
+
+    color: #2E7D32;
+
+    margin-bottom: 5px;
+
+}
+
+.summary-card p {
+
+    font-size: 13px;
+
+    color: #263238;
+
+}
+
+/* Charts */
+
+.report-charts {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+.chart-box {
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.chart-box h3 {
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 16px;
+
+    color: #263238;
+
+    margin-bottom: 20px;
+
+}
+
+/* ==========================
+   PRINT MEDIA QUERY
+========================== */
+
+@media print {
+
+    .sidebar, .top-navbar, .reports-tabs, .print-btn {
+
+        display: none !important;
+
+    }
+
+    .main-content {
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+    }
+
+    .dashboard {
+
+        display: block;
+
+    }
+
+    .report-summary, .report-charts {
+
+        page-break-inside: avoid;
+
+    }
+
+}

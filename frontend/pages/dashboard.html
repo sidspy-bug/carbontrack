@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | CarbonTrack</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="../css/dashboard.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+   <!-- ==========================
+     SIDEBAR
+========================== -->
+
+<aside class="sidebar">
+
+    <!-- Logo -->
+
+    <div class="logo">
+
+        <i class="fa-solid fa-leaf"></i>
+
+        <span>CarbonTrack</span>
+
+    </div>
+
+    <!-- Navigation -->
+
+    <nav class="sidebar-menu">
+
+        <a href="dashboard.html" class="menu-item active">
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>Dashboard</span>
+
+        </a>
+
+        <a href="calculator.html" class="menu-item">
+
+            <i class="fa-solid fa-calculator"></i>
+
+            <span>Calculator</span>
+
+        </a>
+
+        <a href="history.html" class="menu-item">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>History</span>
+
+        </a>
+
+        <a href="goals.html" class="menu-item">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            <span>Goals</span>
+
+        </a>
+
+        <a href="reports.html" class="menu-item">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <span>Reports</span>
+
+        </a>
+
+        <a href="profile.html" class="menu-item">
+
+            <i class="fa-solid fa-user"></i>
+
+            <span>Profile</span>
+
+        </a>
+
+        <a href="#" class="menu-item logout" id="logoutBtn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>Logout</span>
+
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<!-- ==========================
+     MAIN CONTENT
+========================== -->
+
+<main class="main-content">
+
+    <!-- Top Navbar -->
+
+    <header class="top-navbar">
+
+        <!-- Search Box -->
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                placeholder="Search...">
+
+        </div>
+
+        <!-- Right Section -->
+
+        <div class="top-right">
+
+            <!-- Notification -->
+                <div class="notification">
+
+    <button class="icon-btn">
+
+        <i class="fa-regular fa-bell"></i>
+
+    </button>
+
+    <span class="notification-count">3</span>
+
+</div>
+          
+
+            <!-- User Profile -->
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+                    <i class="fa-solid fa-user-circle" style="font-size:40px;color:#2E7D32;"></i>
+                </div>
+
+                <div class="user-info">
+
+                    <h4 id="userName">User</h4>
+
+                    <p>Eco Warrior 🌿</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+       <!-- ==========================
+     DASHBOARD BODY
+========================== -->
+
+<section class="dashboard-body">
+
+    <!-- Welcome Section -->
+
+    <section class="welcome-section">
+
+        <div class="welcome-text">
+
+            <h1 id="welcomeMessage">Welcome Back 👋</h1>
+
+            <p>
+                Monitor your carbon footprint, analyze your daily activities,
+                and take meaningful steps towards a sustainable future.
+            </p>
+
+        </div>
+
+        <a href="calculator.html" class="calculate-btn">
+
+            <i class="fa-solid fa-calculator"></i>
+
+            Calculate Carbon
+
+        </a>
+
+    </section>
+
+    <!-- Statistics Cards -->
+
+    <section class="stats-section">
+
+        <!-- Card 1 -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fa-solid fa-leaf"></i>
+
+            </div>
+
+            <div class="stat-info">
+
+                <h2 id="todayCarbon">0 kg</h2>
+
+                <p>Today's Carbon</p>
+
+            </div>
+
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fa-solid fa-calendar-week"></i>
+
+            </div>
+
+            <div class="stat-info">
+
+                <h2 id="weeklyCarbon">0 kg</h2>
+
+                <p>Weekly Carbon</p>
+
+            </div>
+
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+            </div>
+
+            <div class="stat-info">
+
+                <h2 id="monthlyCarbon">0 kg</h2>
+
+                <p>Monthly Carbon</p>
+
+            </div>
+
+        </div>
+
+        <!-- Card 4 -->
+
+        <div class="stat-card">
+
+            <div class="stat-icon">
+
+                <i class="fa-solid fa-award"></i>
+
+            </div>
+
+            <div class="stat-info">
+
+                <h2 id="carbonScore">N/A</h2>
+
+                <p>Carbon Score</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         CHARTS SECTION
+    ========================== -->
+
+    <section class="charts-section">
+
+        <!-- Weekly Chart -->
+
+        <div class="chart-card">
+
+            <h3>Weekly Carbon Trend</h3>
+
+            <canvas id="weeklyChart"></canvas>
+
+        </div>
+
+        <!-- Pie Chart -->
+
+        <div class="chart-card">
+
+            <h3>Carbon by Category</h3>
+
+            <canvas id="pieChart"></canvas>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         RECENT ACTIVITY
+    ========================== -->
+
+    <section class="recent-activity">
+
+        <h3>Recent Activity</h3>
+
+        <table class="activity-table">
+
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Transport</th>
+                    <th>Electricity</th>
+                    <th>Food</th>
+                    <th>Total Carbon</th>
+                </tr>
+            </thead>
+
+            <tbody id="recentActivityBody">
+
+                <tr>
+                    <td colspan="5" style="text-align:center;color:#607D8B;">
+                        No activity yet. Start by calculating your carbon footprint!
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</section>
+
+</main>
+
+</div>
+
+<!-- Chart.js -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

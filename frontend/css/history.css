@@ -1,0 +1,199 @@
+/* ==========================
+   HISTORY CSS
+========================== */
+
+.history-header {
+
+    margin-bottom: 25px;
+
+}
+
+.history-header h1 {
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 30px;
+
+    color: #263238;
+
+}
+
+.history-header p {
+
+    color: #607D8B;
+
+    margin-top: 5px;
+
+    font-size: 16px;
+
+}
+
+.history-card {
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+
+    overflow-x: auto;
+
+}
+
+.history-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 700px;
+
+}
+
+.history-table th {
+
+    text-align: left;
+
+    padding: 15px;
+
+    background: #E8F5E9;
+
+    color: #2E7D32;
+
+    font-weight: 600;
+
+    font-size: 15px;
+
+}
+
+.history-table td {
+
+    padding: 15px;
+
+    border-bottom: 1px solid #E8F5E9;
+
+    font-size: 14px;
+
+    color: #263238;
+
+    vertical-align: middle;
+
+}
+
+.history-table tr:hover {
+
+    background: #F5FFF7;
+
+}
+
+/* ==========================
+   ACTIONS BUTTONS
+========================== */
+
+.action-btn {
+
+    border: none;
+
+    border-radius: 6px;
+
+    padding: 8px 12px;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-right: 5px;
+
+}
+
+.edit-btn {
+
+    background: #E3F2FD;
+
+    color: #1976D2;
+
+}
+
+.edit-btn:hover {
+
+    background: #BBDEFB;
+
+}
+
+.delete-btn {
+
+    background: #FFEBEE;
+
+    color: #D32F2F;
+
+}
+
+.delete-btn:hover {
+
+    background: #FFCDD2;
+
+}
+
+/* ==========================
+   EDIT MODAL (Inline logic)
+========================== */
+
+.edit-input {
+
+    width: 60px;
+
+    padding: 5px;
+
+    border: 1px solid #DDE7E1;
+
+    border-radius: 4px;
+
+    font-size: 13px;
+
+    outline: none;
+
+}
+
+.edit-input:focus {
+
+    border-color: #2E7D32;
+
+}
+
+.save-btn {
+
+    background: #E8F5E9;
+
+    color: #2E7D32;
+
+}
+
+.save-btn:hover {
+
+    background: #C8E6C9;
+
+}
+
+.cancel-btn {
+
+    background: #F5F5F5;
+
+    color: #616161;
+
+}
+
+.cancel-btn:hover {
+
+    background: #E0E0E0;
+
+}

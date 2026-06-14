@@ -1,0 +1,581 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+/* ==========================
+   BODY
+========================== */
+
+body{
+
+    font-family:"Inter",sans-serif;
+
+    background:#F5FFF7;
+
+}
+
+/* ==========================
+   DASHBOARD
+========================== */
+
+.dashboard{
+
+    display:flex;
+
+    min-height:100vh;
+
+}
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+.sidebar{
+
+    width:270px;
+
+    background:#2E7D32;
+
+    color:white;
+
+}
+
+/* ==========================
+   MAIN CONTENT
+========================== */
+
+.main-content{
+
+    flex:1;
+
+    background:#F5FFF7;
+
+    padding:30px;
+
+}
+
+/* ==========================
+   LOGO
+========================== */
+
+.logo{
+
+    height:80px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:26px;
+
+    font-family:"Poppins",sans-serif;
+
+    font-weight:700;
+
+}
+
+.logo i{
+
+    font-size:30px;
+
+}
+
+/* ==========================
+   SIDEBAR MENU
+========================== */
+
+.sidebar{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* Menu */
+
+.sidebar-menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-top:40px;
+
+}
+
+/* Links */
+
+.menu-item{
+
+    text-decoration:none;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 30px;
+
+    transition:.3s;
+
+    font-size:16px;
+
+}
+
+/* Icons */
+
+.menu-item i{
+
+    width:22px;
+
+    font-size:18px;
+
+}
+
+/* Hover */
+
+.menu-item:hover{
+
+    background:rgba(255,255,255,.15);
+
+}
+
+/* Active */
+
+.active{
+
+    background:white;
+
+    color:#2E7D32;
+
+    font-weight:600;
+
+}
+
+/* Logout */
+
+.logout{
+
+    margin-top:auto;
+
+    margin-bottom:20px;
+
+}
+
+
+/* ==========================
+   TOP NAVBAR
+========================== */
+
+.top-navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:#ffffff;
+
+    padding:20px 30px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+/* Search */
+
+.search-box{
+
+    display:flex;
+
+    align-items:center;
+
+    background:#F5FFF7;
+
+    border-radius:10px;
+
+    padding:10px 15px;
+
+    width:350px;
+
+}
+
+.search-box i{
+
+    color:#607D8B;
+
+}
+
+.search-box input{
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    margin-left:10px;
+
+    width:100%;
+
+}
+
+/* Right Side */
+
+.top-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+/* Notification */
+
+.icon-btn{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#F5FFF7;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+.icon-btn:hover{
+
+    background:#2E7D32;
+
+    color:white;
+
+}
+
+/* User Profile */
+
+.user-profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.user-profile img{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.user-info h4{
+
+    font-size:16px;
+
+    margin-bottom:4px;
+
+}
+
+.user-info p{
+
+    font-size:13px;
+
+    color:#607D8B;
+
+}
+
+/* Welcome Section */
+
+.dashboard-body{
+
+    margin-top:35px;
+
+}
+
+.dashboard-body h1{
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:32px;
+
+}
+
+.dashboard-body p{
+
+    margin-top:10px;
+
+    color:#607D8B;
+
+    font-size:17px;
+
+}
+
+
+/* =====================================
+   DASHBOARD BODY
+===================================== */
+
+.dashboard-body{
+
+    margin-top:30px;
+
+}
+
+/* =====================================
+   WELCOME SECTION
+===================================== */
+
+.welcome-section{
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    padding:35px 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    margin-bottom:35px;
+
+}
+
+.welcome-text h1{
+
+    font-size:34px;
+
+    font-family:"Poppins",sans-serif;
+
+    margin-bottom:12px;
+
+    color:#263238;
+
+}
+
+.welcome-text p{
+
+    color:#607D8B;
+
+    max-width:650px;
+
+    line-height:1.8;
+
+}
+
+/* =====================================
+   BUTTON
+===================================== */
+
+.calculate-btn{
+
+    border:none;
+
+    background:#2E7D32;
+
+    color:#ffffff;
+
+    padding:15px 28px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    transition:.3s;
+
+}
+
+.calculate-btn:hover{
+
+    background:#1B5E20;
+
+    transform:translateY(-2px);
+
+}
+
+/* =====================================
+   STATS GRID
+===================================== */
+
+.stats-section{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+/* =====================================
+   CARD
+===================================== */
+
+.stat-card{
+
+    background:#ffffff;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+/* =====================================
+   ICON
+===================================== */
+
+.stat-icon{
+
+    width:65px;
+
+    height:65px;
+
+    background:#E8F5E9;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.stat-icon i{
+
+    font-size:28px;
+
+    color:#2E7D32;
+
+}
+
+/* =====================================
+   TEXT
+===================================== */
+
+.stat-info h2{
+
+    font-size:28px;
+
+    font-family:"Poppins",sans-serif;
+
+    margin-bottom:6px;
+
+}
+
+.stat-info p{
+
+    color:#607D8B;
+
+    font-size:15px;
+
+}
+
+/* ==========================
+   NOTIFICATION
+========================== */
+
+.notification{
+
+    position:relative;
+
+}
+
+.notification-count{
+
+    position:absolute;
+
+    top:-5px;
+
+    right:-3px;
+
+    width:20px;
+
+    height:20px;
+
+    background:#E53935;
+
+    color:white;
+
+    border-radius:50%;
+
+    font-size:11px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}

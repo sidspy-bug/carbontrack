@@ -1,0 +1,337 @@
+/* ==========================
+   GOALS CSS
+========================== */
+
+.goals-header {
+
+    margin-bottom: 25px;
+
+}
+
+.goals-header h1 {
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 30px;
+
+    color: #263238;
+
+}
+
+.goals-header p {
+
+    color: #607D8B;
+
+    margin-top: 5px;
+
+    font-size: 16px;
+
+}
+
+.goals-container {
+
+    display: grid;
+
+    grid-template-columns: 350px 1fr;
+
+    gap: 25px;
+
+}
+
+.goal-form-card, .goals-list-card {
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.goal-form-card h3, .goals-list-card h3 {
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 18px;
+
+    margin-bottom: 20px;
+
+    color: #2E7D32;
+
+}
+
+/* Form Styles */
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 20px;
+
+}
+
+.form-group label {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #263238;
+
+    margin-bottom: 8px;
+
+}
+
+.form-group input {
+
+    background: #F5FFF7;
+
+    border: 1px solid #DDE7E1;
+
+    border-radius: 10px;
+
+    padding: 12px 15px;
+
+    font-size: 15px;
+
+    color: #263238;
+
+    outline: none;
+
+    transition: .3s;
+
+}
+
+.form-group input:focus {
+
+    border-color: #2E7D32;
+
+    box-shadow: 0 0 0 3px rgba(46,125,50,.15);
+
+}
+
+.add-goal-btn {
+
+    width: 100%;
+
+    background: #2E7D32;
+
+    color: #ffffff;
+
+    border: none;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    transition: .3s;
+
+}
+
+.add-goal-btn:hover {
+
+    background: #1B5E20;
+
+    transform: translateY(-2px);
+
+}
+
+/* Goal Items */
+
+.goal-item {
+
+    border: 1px solid #E8F5E9;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    transition: .3s;
+
+}
+
+.goal-item:hover {
+
+    border-color: #A5D6A7;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,.05);
+
+}
+
+.goal-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 15px;
+
+}
+
+.goal-info h4 {
+
+    font-size: 16px;
+
+    color: #263238;
+
+    margin-bottom: 5px;
+
+}
+
+.goal-info p {
+
+    font-size: 13px;
+
+    color: #607D8B;
+
+}
+
+.goal-status {
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    padding: 4px 10px;
+
+    border-radius: 20px;
+
+}
+
+.status-active {
+
+    background: #E3F2FD;
+
+    color: #1976D2;
+
+}
+
+.status-completed {
+
+    background: #E8F5E9;
+
+    color: #2E7D32;
+
+}
+
+/* Progress Bar */
+
+.progress-container {
+
+    width: 100%;
+
+    height: 10px;
+
+    background: #F5F5F5;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+
+    margin-bottom: 10px;
+
+}
+
+.progress-fill {
+
+    height: 100%;
+
+    background: #2E7D32;
+
+    border-radius: 5px;
+
+    transition: width .5s ease;
+
+}
+
+.progress-fill.over {
+
+    background: #D32F2F;
+
+}
+
+.goal-stats {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 13px;
+
+    color: #607D8B;
+
+}
+
+.goal-actions {
+
+    margin-top: 15px;
+
+    display: flex;
+
+    gap: 10px;
+
+    justify-content: flex-end;
+
+}
+
+.btn-small {
+
+    border: none;
+
+    background: none;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.btn-complete {
+
+    color: #2E7D32;
+
+}
+
+.btn-complete:hover {
+
+    color: #1B5E20;
+
+}
+
+.btn-delete {
+
+    color: #D32F2F;
+
+}
+
+.btn-delete:hover {
+
+    color: #B71C1C;
+
+}

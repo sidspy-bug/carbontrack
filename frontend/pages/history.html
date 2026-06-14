@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>History | CarbonTrack</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="../css/history.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+   <!-- ==========================
+     SIDEBAR
+========================== -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-leaf"></i>
+
+        <span>CarbonTrack</span>
+
+    </div>
+
+    <nav class="sidebar-menu">
+
+        <a href="dashboard.html" class="menu-item">
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>Dashboard</span>
+
+        </a>
+
+        <a href="calculator.html" class="menu-item">
+
+            <i class="fa-solid fa-calculator"></i>
+
+            <span>Calculator</span>
+
+        </a>
+
+        <a href="history.html" class="menu-item active">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>History</span>
+
+        </a>
+
+        <a href="goals.html" class="menu-item">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            <span>Goals</span>
+
+        </a>
+
+        <a href="reports.html" class="menu-item">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <span>Reports</span>
+
+        </a>
+
+        <a href="profile.html" class="menu-item">
+
+            <i class="fa-solid fa-user"></i>
+
+            <span>Profile</span>
+
+        </a>
+
+        <a href="#" class="menu-item logout" id="logoutBtn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>Logout</span>
+
+        </a>
+
+    </nav>
+
+</aside>
+
+<!-- ==========================
+     MAIN CONTENT
+========================== -->
+
+<main class="main-content">
+
+    <header class="top-navbar">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text" id="searchInput" placeholder="Search history by date (YYYY-MM-DD)...">
+
+        </div>
+
+        <div class="top-right">
+
+            <div class="notification">
+
+                <button class="icon-btn">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                </button>
+
+                <span class="notification-count">3</span>
+
+            </div>
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+                    <i class="fa-solid fa-user-circle" style="font-size:40px;color:#2E7D32;"></i>
+                </div>
+
+                <div class="user-info">
+
+                    <h4 id="userName">User</h4>
+
+                    <p>Eco Warrior 🌿</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ==========================
+         HISTORY BODY
+    ========================== -->
+
+    <section class="dashboard-body">
+
+        <div class="history-header">
+            
+            <h1>Carbon History</h1>
+            
+            <p>View, edit, or delete your past carbon footprint entries.</p>
+
+        </div>
+
+        <div class="history-card">
+
+            <table class="history-table">
+
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Transport (kg)</th>
+                        <th>Electricity (kg)</th>
+                        <th>Food (kg)</th>
+                        <th>Total Carbon</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="historyBody">
+
+                    <tr>
+                        <td colspan="6" style="text-align:center;color:#607D8B;padding:30px;">
+                            <i class="fa-solid fa-spinner fa-spin" style="font-size:24px;margin-bottom:10px;"></i>
+                            <br>Loading history...
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+</div>
+
+<script src="../js/history.js"></script>
+
+</body>
+
+</html>

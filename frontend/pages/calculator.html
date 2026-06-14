@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Carbon Calculator | CarbonTrack</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="../css/calculator.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+   <!-- ==========================
+     SIDEBAR
+========================== -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-leaf"></i>
+
+        <span>CarbonTrack</span>
+
+    </div>
+
+    <nav class="sidebar-menu">
+
+        <a href="dashboard.html" class="menu-item">
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>Dashboard</span>
+
+        </a>
+
+        <a href="calculator.html" class="menu-item active">
+
+            <i class="fa-solid fa-calculator"></i>
+
+            <span>Calculator</span>
+
+        </a>
+
+        <a href="history.html" class="menu-item">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>History</span>
+
+        </a>
+
+        <a href="goals.html" class="menu-item">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            <span>Goals</span>
+
+        </a>
+
+        <a href="reports.html" class="menu-item">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <span>Reports</span>
+
+        </a>
+
+        <a href="profile.html" class="menu-item">
+
+            <i class="fa-solid fa-user"></i>
+
+            <span>Profile</span>
+
+        </a>
+
+        <a href="#" class="menu-item logout" id="logoutBtn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>Logout</span>
+
+        </a>
+
+    </nav>
+
+</aside>
+
+<!-- ==========================
+     MAIN CONTENT
+========================== -->
+
+<main class="main-content">
+
+    <header class="top-navbar">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text" placeholder="Search...">
+
+        </div>
+
+        <div class="top-right">
+
+            <div class="notification">
+
+                <button class="icon-btn">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                </button>
+
+                <span class="notification-count">3</span>
+
+            </div>
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+                    <i class="fa-solid fa-user-circle" style="font-size:40px;color:#2E7D32;"></i>
+                </div>
+
+                <div class="user-info">
+
+                    <h4 id="userName">User</h4>
+
+                    <p>Eco Warrior 🌿</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ==========================
+         CALCULATOR BODY
+    ========================== -->
+
+    <section class="dashboard-body">
+
+        <div class="calculator-header">
+            
+            <h1>Carbon Calculator</h1>
+            
+            <p>Enter your daily activities below to calculate and save your carbon footprint.</p>
+
+        </div>
+
+        <div class="calculator-card">
+
+            <form id="calculatorForm" class="calc-form">
+
+                <!-- Entry Date -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-calendar-day"></i> Entry Date</label>
+                        <input type="date" id="entryDate" required>
+                    </div>
+                </div>
+
+                <!-- Transport Section -->
+                <h3 class="category-title"><i class="fa-solid fa-car"></i> Transport</h3>
+                <p class="category-hint">Enter the distance travelled by each mode of transport.</p>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-car"></i> Car</label>
+                        <div class="input-with-unit">
+                            <input type="number" id="transportCar" min="0" step="0.1" placeholder="0">
+                            <span class="unit-badge">km</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-bus"></i> Bus</label>
+                        <div class="input-with-unit">
+                            <input type="number" id="transportBus" min="0" step="0.1" placeholder="0">
+                            <span class="unit-badge">km</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-bicycle"></i> Bike / Cycle</label>
+                        <div class="input-with-unit">
+                            <input type="number" id="transportBike" min="0" step="0.1" placeholder="0">
+                            <span class="unit-badge">km</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-train"></i> Train</label>
+                        <div class="input-with-unit">
+                            <input type="number" id="transportTrain" min="0" step="0.1" placeholder="0">
+                            <span class="unit-badge">km</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Home & Utilities Section -->
+                <h3 class="category-title"><i class="fa-solid fa-bolt"></i> Home &amp; Utilities</h3>
+                <p class="category-hint">Enter your household energy and water consumption.</p>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-plug"></i> Electricity Used</label>
+                        <div class="input-with-unit">
+                            <input type="number" id="electricity" min="0" step="0.1" placeholder="0">
+                            <span class="unit-badge">kWh</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-droplet"></i> Water Consumed</label>
+                        <div class="input-with-unit">
+                            <input type="number" id="water" min="0" step="0.1" placeholder="0">
+                            <span class="unit-badge">litres</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Food & Waste Section -->
+                <h3 class="category-title"><i class="fa-solid fa-utensils"></i> Food &amp; Waste</h3>
+                <p class="category-hint">Enter number of meals eaten and waste generated today.</p>
+
+                <div class="form-row">
+
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-bowl-food"></i> Meals Consumed</label>
+                        <div class="input-with-unit">
+                            <input type="number" id="food" min="0" step="1" placeholder="0">
+                            <span class="unit-badge">meals</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-trash"></i> Waste Generated</label>
+                        <div class="input-with-unit">
+                            <input type="number" id="waste" min="0" step="0.1" placeholder="0">
+                            <span class="unit-badge">kg</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Live Preview -->
+                <div class="calc-preview" id="calcPreview">
+                    <div class="preview-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <div class="preview-text">
+                        <span class="preview-label">Estimated Carbon Footprint</span>
+                        <span class="preview-value" id="livePreview">0.00 kg CO₂e</span>
+                    </div>
+                </div>
+
+                <div class="calc-actions">
+
+                    <button type="submit" class="submit-btn" id="calcSubmitBtn">
+                        <i class="fa-solid fa-check"></i> Calculate &amp; Save
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+</div>
+
+<script src="../js/calculator.js"></script>
+
+</body>
+
+</html>

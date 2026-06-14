@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Reports | CarbonTrack</title>
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="../css/reports.css">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+   <!-- ==========================
+     SIDEBAR
+========================== -->
+
+<aside class="sidebar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-leaf"></i>
+
+        <span>CarbonTrack</span>
+
+    </div>
+
+    <nav class="sidebar-menu">
+
+        <a href="dashboard.html" class="menu-item">
+
+            <i class="fa-solid fa-house"></i>
+
+            <span>Dashboard</span>
+
+        </a>
+
+        <a href="calculator.html" class="menu-item">
+
+            <i class="fa-solid fa-calculator"></i>
+
+            <span>Calculator</span>
+
+        </a>
+
+        <a href="history.html" class="menu-item">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <span>History</span>
+
+        </a>
+
+        <a href="goals.html" class="menu-item">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            <span>Goals</span>
+
+        </a>
+
+        <a href="reports.html" class="menu-item active">
+
+            <i class="fa-solid fa-file-lines"></i>
+
+            <span>Reports</span>
+
+        </a>
+
+        <a href="profile.html" class="menu-item">
+
+            <i class="fa-solid fa-user"></i>
+
+            <span>Profile</span>
+
+        </a>
+
+        <a href="#" class="menu-item logout" id="logoutBtn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>Logout</span>
+
+        </a>
+
+    </nav>
+
+</aside>
+
+<!-- ==========================
+     MAIN CONTENT
+========================== -->
+
+<main class="main-content" id="printableArea">
+
+    <header class="top-navbar hide-on-print">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text" placeholder="Search...">
+
+        </div>
+
+        <div class="top-right">
+
+            <div class="notification">
+
+                <button class="icon-btn">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                </button>
+
+                <span class="notification-count">3</span>
+
+            </div>
+
+            <div class="user-profile">
+
+                <div class="user-avatar">
+                    <i class="fa-solid fa-user-circle" style="font-size:40px;color:#2E7D32;"></i>
+                </div>
+
+                <div class="user-info">
+
+                    <h4 id="userName">User</h4>
+
+                    <p>Eco Warrior 🌿</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ==========================
+         REPORTS BODY
+    ========================== -->
+
+    <section class="dashboard-body">
+
+        <div class="reports-header">
+            
+            <div class="header-text">
+                <h1>Carbon Reports</h1>
+                <p>Analyze your environmental impact over time.</p>
+            </div>
+
+            <button class="print-btn hide-on-print" onclick="window.print()">
+                <i class="fa-solid fa-download"></i> Download PDF
+            </button>
+
+        </div>
+
+        <div class="reports-tabs hide-on-print">
+            <button class="tab-btn active" data-period="weekly">Weekly</button>
+            <button class="tab-btn" data-period="monthly">Monthly</button>
+            <button class="tab-btn" data-period="yearly">Yearly</button>
+        </div>
+
+        <div class="report-summary">
+            
+            <div class="summary-card">
+                <h3>Total Carbon</h3>
+                <h2 id="totalCarbonVal">0 kg</h2>
+                <p id="dateRangeVal">Date Range</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Highest Category</h3>
+                <h2 id="highestCategoryVal">-</h2>
+                <p>Needs improvement</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Lowest Category</h3>
+                <h2 id="lowestCategoryVal">-</h2>
+                <p>Doing great!</p>
+            </div>
+
+        </div>
+
+        <div class="report-charts">
+            
+            <div class="chart-box">
+                <h3>Carbon Emissions Over Time</h3>
+                <canvas id="timeChart"></canvas>
+            </div>
+
+            <div class="chart-box">
+                <h3>Emissions Breakdown</h3>
+                <canvas id="categoryChart"></canvas>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../js/reports.js"></script>
+
+</body>
+
+</html>
